@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+  .output {
+    position: relative;
+  }
+  .placeholder {
+    position: absolute;
+    top: 0;
+  }
+  
+  img.placeholder {
+    visibility: hidden;
+  }
+  
+  #canvas {
+     /* note cursor is fixed 30px PNG - locked to BRUSH_SIZE of 30 */
+     /* TODO: SVG cursor? */
+     cursor: url(paintbrush-cursor.cur) 16 16, crosshair !important;
+  }
+  
+</style>
+</head>
+<body>
+<!--
+Choose an image URL:
+<input id="image-src" type="text" value="http://"><button id="load-image">Load image</button>
+-->
+<button id="reset">Clear canvas</button>
+<div class="output">
+  <canvas id="canvas" width="500" height="335" class="placeholder">Canvas!</canvas>
+  <img id="image" class="placeholder" src="legos.png" />
+  
+</div>
+<script src="../liquify.js"></script>
+
+</body>
+</html>
